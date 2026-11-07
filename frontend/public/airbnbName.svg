@@ -1,0 +1,52 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="24" result="blur1"/>
+      <feColorMatrix in="blur1" type="matrix"
+        values="1 0 0 0 0.95
+                0 0 0 0 0.03
+                0 0 0 0 0.12
+                0 0 0 1 0" result="pinkGlow"/>
+      <feGaussianBlur stdDeviation="7" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="pinkGlow"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="500" fill="#000"/>
+
+  <g fill="#FF385C" stroke="#FF385C" filter="url(#glow)">
+    <path
+      d="M215 105
+         C194 105 179 124 165 152
+         L91 300
+         C72 339 91 369 120 369
+         C145 369 174 349 215 309
+         C256 349 285 369 310 369
+         C339 369 358 339 339 300
+         L265 152
+         C251 124 236 105 215 105Z
+         M215 282
+         C191 253 169 226 170 202
+         C171 180 192 169 215 169
+         C238 169 259 180 260 202
+         C261 226 239 253 215 282Z"
+      fill-rule="evenodd"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+    />
+
+    <text
+      x="365" y="300"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="190"
+      font-weight="600"
+      letter-spacing="-10"
+      stroke-width="1"
+    >airbnb</text>
+  </g>
+</svg>
