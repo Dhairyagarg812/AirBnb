@@ -15,7 +15,7 @@ export const signUp=async(req,res)=>{
         const token=await genToken(user._id);
         res.cookie("token",token,{
             httpOnly:process.env.httpOnly,
-            secure:false,
+            secure:true,
             sameSite:process.env.SAME_SITE,
             maxAge:7*24*60*60*1000
         });
@@ -44,7 +44,7 @@ export const login=async(req,res)=>{
         const token=await genToken(userExists._id);
         res.cookie("token",token,{
             httpOnly:process.env.httpOnly,
-            secure:false,
+            secure:true,
             sameSite:process.env.SAME_SITE,
             maxAge:7*24*60*60*1000
         });
