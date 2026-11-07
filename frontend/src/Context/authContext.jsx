@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 export const userContext=createContext();
 function UserContextProvider({children}){
-    let serverUrl="http://localhost:8000";
+    let serverUrl="https://airbnb-45gq.onrender.com";
     let value={serverUrl}
     return(
         <>
