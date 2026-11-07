@@ -1,4 +1,3 @@
-import React from 'react'
 import User from "../model/userModel.js"
 const getCurrentUser = async(req,res) => {
     try{
